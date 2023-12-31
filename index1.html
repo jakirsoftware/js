@@ -1,0 +1,151 @@
+<!doctype html>
+    <!-- saved from url=(0032)file:///E:/App%20Link/index.html -->
+<html lang="en">
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+        #myInput{
+        box-sizing: border-box;
+        border: 1px solid #dddcdc;
+        border-radius: 5px;
+        box-shadow: 0px 2px 2px 0px rgba(0,0,0,0.2);
+        padding: 8px;
+        width: 100%;
+        font-size: 18px;
+        }
+        .category{
+        box-sizing: border-box;
+        border: 1px solid #eee;
+        border-top-left-radius: 5px;
+        border-top-right-radius: 5px;
+        padding: 10px;
+        background: #FF416C;
+        background: -webkit-linear-gradient(to right, #FF4B2B, #FF416C);
+        background: linear-gradient(to right, #FF4B2B, #FF416C);
+        color: #fff;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        box-shadow: 0px 2px 2px 0px rgba(0,0,0,0.1);
+        font-family: 'Lemonada', cursive;
+        font-size: 22px;
+        }       
+        .grid{
+        display: grid;
+        grid-auto-rows: 2fr;
+        grid-template-columns: repeat(1, 2fr);
+        grid-gap: 10px;
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        }
+        .box{
+        background: #fff;
+        border: 1px solid #e6e6e6;
+        border-radius: 8px;
+        width: auto;
+        height: 180px;
+        box-shadow: 0px 2px 2px 0px rgba(0,0,0,0.2);
+        padding: 2px;
+        text-align: center;
+        }
+        .box a{
+        padding: 0;
+        margin: 0;
+        text-decoration: none;
+        color: #000;
+        }
+        .box img{
+        width: 150px;
+        height: 150px;
+        margin-top: 2px;
+        margin-bottom: -1px;
+        }
+        .box span{
+        font-family: 'Titillium Web', sans-serif;
+        font-size: 17px;
+        }
+        </style>
+        <title>Js-iT</title>
+    </head>
+    <body>
+        <input type="text" id="myInput" onkeyup="searchItem()" placeholder="search..." title="name">
+        
+        <div class="category">Inventory Management Software</div>
+        <ul class="grid" id="myList">
+            
+            <li class="box">
+                <a href="http://23.106.120.170/~trusttoo/login_ags/index.php">
+                <img src="bkash.jpg" >
+                <br/>
+                <span>Shop Management</span>
+            </a>
+            </li>
+
+			<li class="box">
+                <a href="https://access.page.link/shop">
+                <img src="bkash.jpg" >
+                <br/>
+                <span>Hospital Management</span>
+            </a>
+            </li>            
+        </ul>     
+        <div class="category">Softwares</div>
+        <ul class="grid" id="myList">
+             <li class="box">
+                <a href="https://m.youtube.com/watch?v=eD3HhSKYCko">
+                <img src="https://0l16i9j67o8nqn5k6kk80a-on.drv.tw/chagolerhat/dada.jpg" >
+                <br/>
+                <span>গাবতলীর ছাগলের হাট</span>
+            </a>
+        </li>
+			<li class="box">
+                <a href="https://www.mbclawacademy.com/">
+                <img src="https://0l16i9j67o8nqn5k6kk80a-on.drv.tw/chagolerhat/jony.jpg" >
+                <br/>
+                <span>Facebook</span>
+            </a>
+            </li>
+            
+        </ul>
+
+        <div class="category">ছাগল ক্রয়/বিক্রয়কারীদের ঠিকানা</div>
+        <ul class="grid" id="myList">
+            <li class="box">
+                <a href="https://www.mbclawacademy.com/">
+                <img src="https://firebasestorage.googleapis.com/v0/b/chagoler-hat.appspot.com/o/ic.jpg?alt=media&token=5eb62f39-4d15-4404-9731-dbeff4119c8c" >
+                <br/>
+                <span>Facebook</span>
+            </a>
+        </li>
+			<li class="box">
+                <a href="https://www.mbclawacademy.com/">
+                <img src="https://firebasestorage.googleapis.com/v0/b/chagoler-hat.appspot.com/o/ic.jpg?alt=media&token=5eb62f39-4d15-4404-9731-dbeff4119c8c" >
+                <br/>
+                <span>Facebook</span>
+            </a>
+        </li>            
+        </ul>
+        <script>
+        function searchItem()
+        {
+        var input, filter, ul, li, span, i;
+        input = document.getElementById("myInput");
+        filter = input.value.toUpperCase();
+        ul = document.getElementById("myList");
+        li = document.getElementsByTagName('li');        
+        for (i = 0; i < li.length; i++)
+        {
+        span=li[i].getElementsByTagName('span')[0];
+        if (span.innerHTML.toUpperCase().indexOf(filter)>-1)
+        {
+        li[i].style.display= "";
+        }
+        else
+        {
+        li[i].style.display= "none";
+    }}}
+        </script>        
+    </body>
+</html>
