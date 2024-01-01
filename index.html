@@ -63,6 +63,26 @@
         </style>
         <title>Js-iT</title>
     </head>
+    <script>
+        function searchItem()
+        {
+        var input, filter, ul, li, span, i;
+        input = document.getElementById("myInput");
+        filter = input.value.toUpperCase();
+        ul = document.getElementById("myList");
+        li = document.getElementsByTagName('li');        
+        for (i = 0; i < li.length; i++)
+        {
+        span=li[i].getElementsByTagName('span')[0];
+        if (span.innerHTML.toUpperCase().indexOf(filter)>-1)
+        {
+        li[i].style.display= "";
+        }
+        else
+        {
+        li[i].style.display= "none";
+    }}}
+        </script> 
     <body>
         
         <ul class="grid">
@@ -95,9 +115,7 @@
 
             <li class="box">
                 <a href="https://docs.google.com/spreadsheets/d/1lJcLGm2pJUqvnDDCcozNzZp-ypXCjSm4pvPpBpYsLSk/edit#gid=0">
-                <br/>
-                <span>Appsheet App</span>
-            </a>
+                <br/>Appsheet App</a>
             </li>  
 
             <li class="box">
@@ -189,25 +207,6 @@
 
         </ul>     
 
-        <script>
-        function searchItem()
-        {
-        var input, filter, ul, li, span, i;
-        input = document.getElementById("myInput");
-        filter = input.value.toUpperCase();
-        ul = document.getElementById("myList");
-        li = document.getElementsByTagName('li');        
-        for (i = 0; i < li.length; i++)
-        {
-        span=li[i].getElementsByTagName('span')[0];
-        if (span.innerHTML.toUpperCase().indexOf(filter)>-1)
-        {
-        li[i].style.display= "";
-        }
-        else
-        {
-        li[i].style.display= "none";
-    }}}
-        </script>        
+       
     </body>
 </html>
